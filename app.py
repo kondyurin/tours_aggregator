@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 from flask import request
 
+from data import title, subtitle, description, departures, tours
+
 
 app = Flask(__name__)
 
@@ -9,9 +11,13 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
-@app.route('/about/')
-def about():
-    return render_template('about.html')
+@app.route('/tour/<int:id>/')
+def tour(id):
+    return render_template('tour.html', id=id, tours=tours, departures=departures)
+
+@app.route('/direction/')
+def direction():
+    return render_template('direction.html')
 
 @app.route('/videos/<id>')
 def videos_item(id):
