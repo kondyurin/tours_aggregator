@@ -15,9 +15,9 @@ def main():
 def tour(id):
     return render_template('tour.html', id=id, tours=tours, departures=departures)
 
-@app.route('/direction/')
-def direction():
-    return render_template('direction.html')
+@app.route('/direction/<country>/')
+def direction(country):
+    return render_template('direction.html', country=country, tours=tours, departures=departures)
 
 @app.route('/videos/<id>')
 def videos_item(id):
