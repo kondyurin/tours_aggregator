@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('index.html', subtitle=subtitle, description=description, tours=tours)
+    return render_template('index.html', subtitle=subtitle, description=description, tours=tours, title=title, departures=departures)
 
 @app.route('/tour/<int:id>/')
 def tour(id):

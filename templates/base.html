@@ -16,21 +16,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav" data-test="navigation">
+          {% for city, from in departures.items() %}
           <li class="nav-item active">
-            <a class="nav-link" href="#" data-test="navlink">Из Москвы </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-test="navlink">Из Петербурга</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-test="navlink">Из Новосибирска</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-test="navlink">Из Екатеринбурга</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-test="navlink">Из Казани</a>
-          </li>
+            <a class="nav-link" href="/direction/{{ city }}/" data-test="navlink">{{ from }}</a>
+		  </li>
+		  {% endfor %}
         </ul>
       </div>
     </nav>
