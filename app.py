@@ -30,5 +30,8 @@ def not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return "500 Internal Server Error"
-    
-app.run('0.0.0.0', 8000)
+
+
+if __name__ == "__main__":
+    # app.run('0.0.0.0', 8000)
+    app.run()    
