@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}{{ tours[id].title }}  {{ tours[id].stars }} ★{% endblock %}
+{% block navbar_brand %}{{ title }}{% endblock %}
 {% block content %}
     <h1 class="display-3 mt-4" data-test="title">{{ tours[id].title }}  {{ tours[id].stars }} ★</h1>
 

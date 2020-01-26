@@ -13,7 +13,7 @@ def main():
 
 @app.route('/tour/<int:id>/')
 def tour(id):
-    return render_template('tour.html', id=id, tours=tours, departures=departures)
+    return render_template('tour.html', id=id, tours=tours, departures=departures, title=title)
 
 @app.route('/direction/<country>/')
 def direction(country):
