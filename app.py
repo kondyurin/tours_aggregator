@@ -21,7 +21,7 @@ def direction(country):
     country_tours_price = [values['price'] for values in tours.values() if values['departure'] == country]
     country_tours_nights = [values['nights'] for values in tours.values() if values['departure'] == country]
 
-    return render_template('direction.html', country=country, tours=tours, departures=departures, country_tours=country_tours, country_tours_price=country_tours_price, country_tours_nights=country_tours_nights)
+    return render_template('direction.html', country=country, tours=tours, departures=departures, country_tours=country_tours, country_tours_price=country_tours_price, country_tours_nights=country_tours_nights, title=title)
 
 # @app.route('/book/<author>/<title>')
 # def book(author, title):
