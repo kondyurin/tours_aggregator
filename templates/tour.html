@@ -5,9 +5,9 @@
 
     <!-- HERO -->
 
-    <p class="lead" data-test="lead"><span data-test="country">{{ tours[id].country }}</span> <span data-text="departure">{{ departures.get(tours[id].departure) }}</span> <span data-text="nights">{{ tours[id].nights }}</span> ночей</p>
+    <p class="lead" data-test="lead"><span data-test="country">{{ tours[id].country }}</span> <span data-text="departure">{{ departures.get(tours[id].departure) }}</span> <span data-text="nights">на {{ tours[id].nights }}</span> ночей</p>
 
-    <img data-test="picture" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="w-75" alt="">
+    <img data-test="picture" src="{{ tours[id].picture }}" class="w-75" alt="">
     
     <p class="my-4 w-75" data-test="description">{{ tours[id].description }}</p>
 
