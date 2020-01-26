@@ -31,4 +31,4 @@ def not_found(e):
 def server_error(e):
     return "500 Internal Server Error"
     
-app.run('0.0.0.0', 8000, debug=True)
+app.run('0.0.0.0', 8000)
