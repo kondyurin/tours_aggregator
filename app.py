@@ -17,19 +17,11 @@ def tour(id):
 
 @app.route('/direction/<country>/')
 def direction(country):
-    country_tours = [values for values in tours.values() if values['departure'] == country]
+    country_tours = {tour_id:tour_data for tour_id,tour_data in tours.items() if tour_data['departure'] == country}
     country_tours_price = [values['price'] for values in tours.values() if values['departure'] == country]
     country_tours_nights = [values['nights'] for values in tours.values() if values['departure'] == country]
 
     return render_template('direction.html', country=country, tours=tours, departures=departures, country_tours=country_tours, country_tours_price=country_tours_price, country_tours_nights=country_tours_nights, title=title)
-
-# @app.route('/book/<author>/<title>')
-# def book(author, title):
-#     return "Здесь будет страница книги " + title + " автора " + author
-
-# @app.route('/search/')
-# def search():
-#     return "Выполняем поиск по строке " + request.values.get("s")
 
 @app.errorhandler(404)
 def not_found(e):

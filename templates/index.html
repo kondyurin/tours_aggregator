@@ -15,15 +15,15 @@
 
     <div class="row mt-5" data-test="cards">
 
-		{% for k,v in tours.items() %}
-		{% if k < 7 %}
+		{% for id, tour in tours.items() %}
+		{% if id < 7 %}
         <div class="col-4" data-test="card">
             <div class="card mb-3" >
-            <img src="{{ v.picture }}" class="card-img-top img-fluid" data-test="picture">
+            <img src="{{ tour.picture }}" class="card-img-top img-fluid" data-test="picture">
             <div class="card-body">
-              <h5 class="card-title">{{ v.title }}</h5>
-             <p class="card-text">{{ v.description|truncate(100, True) }}</p>
-                <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
+              <h5 class="card-title">{{ tour.title }}</h5>
+             <p class="card-text">{{ tour.description|truncate(100, True) }}</p>
+                <a href="/tour/{{ id }}/" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
             </div>
         </div>
 		</div>
